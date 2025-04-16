@@ -22,17 +22,15 @@ return {
             end,
           },
           -- New mapping for showing documentation (like 'K' in normal mode)
-          ["<C-k>"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Show documentation (Hover)" },
+          ["<C-S-k>"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Show documentation (Hover)" },
           -- New mapping for showing signature help
-          -- NOTE: <C-S-Space> might not work in all terminals.
-          -- If it doesn't, you might need to choose a different keybinding.
-          ["<C-S-Space>"] = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Show signature help" },
+          -- ["<C-S-Space>"] = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Show signature help" },
           ["<C-F2>"] = { "<cmd>CompilerOpen<cr>", desc = "Open's the Compiler.Nvim layout." },
           ["<F2>"] = { "<cmd>CompilerStop<cr>" .. "<cmd>CompilerRedo<cr>", desc = "Redo last compiler task." },
           ["<A-F2>"] = { "<cmd>CompilerToggleResults<cr>", desc = "View last compiler task." },
-          ["<Leader>ro"] = { "<cmd>CompilerOpen<cr>", desc = "Open's the Compiler.Nvim layout." },
-          ["<Leader>rr"] = { "<cmd>CompilerStop<cr>" .. "<cmd>CompilerRedo<cr>", desc = "Redo last compiler task." },
-          ["<Leader>rq"] = { "<cmd>CompilerToggleResults<cr>", desc = "View last compiler task." },
+          ["<C-Backspace>"] = "<C-w>",
+          ["<A-Backspace>"] = "<C-w>",
+          ["<C-s>"] = { "<cmd>w<cr>", desc = "Saves the current file." },
         },
         v = {
           ["v"] = {

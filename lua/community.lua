@@ -21,7 +21,6 @@ return {
   { import = "astrocommunity.motion.marks-nvim" },
   { import = "astrocommunity.motion.mini-ai" },
   { import = "astrocommunity.motion.flash-nvim" },
-  { import = "astrocommunity.motion.mini-bracketed" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.indent.mini-indentscope" },
   { import = "astrocommunity.completion.blink-cmp" },

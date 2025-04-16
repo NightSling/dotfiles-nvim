@@ -18,3 +18,26 @@ end
 require "lazy_setup"
 require "polish"
 vim.cmd "colorscheme onedark_dark"
+
+-- Normal mode: Ctrl + / → toggle line comment
+vim.keymap.set(
+  "n",
+  "<C-_>",
+  function() require("Comment.api").toggle.linewise.current() end,
+  { noremap = true, silent = true }
+)
+
+vim.keymap.set("i", "<C-_>", function()
+  local api = require "Comment.api"
+  -- Leave insert mode, run toggle, then re-enter insert
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
+  api.toggle.linewise.current()
+  vim.api.nvim_feedkeys("A", "n", false) -- Return to Insert mode at end of line
+end, { noremap = true, silent = true })
+
+-- Visual mode: Ctrl + / → toggle comment on selection
+vim.keymap.set("v", "<C-_>", function()
+  local esc = vim.api.nvim_replace_termcodes("<ESC>", true, false, true)
+  vim.api.nvim_feedkeys(esc, "nx", false)
+  require("Comment.api").toggle.linewise(vim.fn.visualmode())
+end, { noremap = true, silent = true })
