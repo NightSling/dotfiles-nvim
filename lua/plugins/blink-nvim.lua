@@ -2,7 +2,23 @@ return {
   "Saghen/blink.cmp",
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
+  dependencies = {
+    {
+      "giuxtaposition/blink-cmp-copilot",
+    },
+  },
   opts = {
+    sources = {
+      default = { "lsp", "path", "snippets", "buffer", "copilot" },
+      providers = {
+        copilot = {
+          name = "copilot",
+          module = "blink-cmp-copilot",
+          score_offset = 100,
+          async = true,
+        },
+      },
+    },
     completion = {
       trigger = {
         show_on_keyword = true,
