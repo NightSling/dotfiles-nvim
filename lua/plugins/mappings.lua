@@ -5,7 +5,7 @@ return {
     opts = {
       mappings = {
         n = {
-          ["<Leader>O"] = { "<cmd>Oil --float<cr>", desc = "Oil the current directory." },
+          ["<Leader>o"] = { "<cmd>Oil --float<cr>", desc = "Oil the current directory." },
           ['<C-">'] = { "<cmd>AstroRoot<cr>", desc = "Go to AstroNvim project root." },
           ["<C-F2>"] = { "<cmd>CompilerOpen<cr>", desc = "Open's the Compiler.Nvim layout." },
           ["<F2>"] = { "<cmd>CompilerStop<cr>" .. "<cmd>CompilerRedo<cr>", desc = "Redo last compiler task." },
@@ -23,8 +23,6 @@ return {
           },
           -- New mapping for showing documentation (like 'K' in normal mode)
           ["<C-S-k>"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Show documentation (Hover)" },
-          -- New mapping for showing signature help
-          -- ["<C-S-Space>"] = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Show signature help" },
           ["<C-F2>"] = { "<cmd>CompilerOpen<cr>", desc = "Open's the Compiler.Nvim layout." },
           ["<F2>"] = { "<cmd>CompilerStop<cr>" .. "<cmd>CompilerRedo<cr>", desc = "Redo last compiler task." },
           ["<A-F2>"] = { "<cmd>CompilerToggleResults<cr>", desc = "View last compiler task." },
