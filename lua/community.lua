@@ -27,6 +27,7 @@ return {
   { import = "astrocommunity.scrolling.cinnamon-nvim" },
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.code-runner.compiler-nvim" },
+  { import = "astrocommunity.completion.avante-nvim" },
   -- Themes
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.rose-pine" },
