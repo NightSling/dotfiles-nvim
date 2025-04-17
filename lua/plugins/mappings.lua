@@ -13,6 +13,11 @@ return {
           ["<Leader>ro"] = { "<cmd>CompilerOpen<cr>", desc = "Open's the Compiler.Nvim layout." },
           ["<Leader>rr"] = { "<cmd>CompilerStop<cr>" .. "<cmd>CompilerRedo<cr>", desc = "Redo last compiler task." },
           ["<Leader>rq"] = { "<cmd>CompilerToggleResults<cr>", desc = "View last compiler task." },
+          -- Switch to the next buffer (towards right).
+          ["<S-l>"] = { "<cmd>bnext<cr>", desc = "Switch to the next buffer" },
+          -- Switch to the previous buffer (towards left).
+          ["<S-h>"] = { "<cmd>bprevious<cr>", desc = "Switch to the previous buffer" },
+          ["<Leader>G"] = { "<cmd>Octo actions<cr>", desc = "Open Octo actions" },
         },
         i = {
           ["jk"] = {
