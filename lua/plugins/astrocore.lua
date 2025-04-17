@@ -11,6 +11,7 @@ return {
     rooter = {
       detector = {
         "lsp", -- highest priority is getting workspace from running language servers
+        { "lsp" },
         { "lua", "MakeFile", "package.json", "Cargo.toml", "build.gradle.kts", "pom.xml", "go.mod" }, -- lastly check for known project root files
         { ".git", "_darcs", ".hg", ".bzr", ".svn" }, -- next check for a version controlled parent directory
       },
