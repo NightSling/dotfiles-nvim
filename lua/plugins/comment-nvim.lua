@@ -3,4 +3,5 @@ return {
   opts = {
     -- add any options here
   },
+  init = function() require("Comment").setup() end,
 }
