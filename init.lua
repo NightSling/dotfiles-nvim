@@ -40,3 +40,14 @@ vim.keymap.set("v", "<C-_>", function()
   vim.api.nvim_feedkeys(esc, "nx", false)
   require("Comment.api").toggle.linewise(vim.fn.visualmode())
 end, { noremap = true, silent = true })
+
+vim.api.nvim_create_user_command(
+  "TypstPin",
+  function()
+    vim.lsp.buf.execute_command {
+      command = "tinymist.pinMain",
+      arguments = { vim.api.nvim_buf_get_name(0) },
+    }
+  end,
+  {}
+)

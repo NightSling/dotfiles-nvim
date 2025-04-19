@@ -20,6 +20,7 @@ return {
           -- Switch to the previous buffer (towards left).
           ["<S-h>"] = { "<cmd>bprevious<cr>", desc = "Switch to the previous buffer" },
           ["<Leader>G"] = { "<cmd>Octo actions<cr>", desc = "Open Octo actions" },
+          ["<Leader>uk"] = { "<cmd>ShowkeysToggle<cr>", desc = "Toggle show keys for neovim." },
         },
         i = {
           ["jk"] = {

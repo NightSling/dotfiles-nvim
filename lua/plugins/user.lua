@@ -7,7 +7,7 @@ return {
 
   -- == Examples of Adding Plugins ==
 
-  "andweeb/presence.nvim",
+  { "vyfor/cord.nvim", build = ":Cord update" },
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
