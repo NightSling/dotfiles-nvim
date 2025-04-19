@@ -13,6 +13,7 @@ return {
           ["<A-F2>"] = { "<cmd>CompilerToggleResults<cr>", desc = "View last compiler task." },
           ["<Leader>ro"] = { "<cmd>CompilerOpen<cr>", desc = "Open's the Compiler.Nvim layout." },
           ["<Leader>rr"] = { "<cmd>CompilerStop<cr>" .. "<cmd>CompilerRedo<cr>", desc = "Redo last compiler task." },
+          ["<C-S>P"] = { '"_dP', desc = "Paste (no-delete register)" },
           ["<Leader>rq"] = { "<cmd>CompilerToggleResults<cr>", desc = "View last compiler task." },
           -- Switch to the next buffer (towards right).
           ["<S-l>"] = { "<cmd>bnext<cr>", desc = "Switch to the next buffer" },

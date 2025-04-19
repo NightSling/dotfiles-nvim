@@ -1,7 +1,7 @@
 return {
   "olimorris/onedarkpro.nvim",
-  lazy = false,
-  priority = 1000,
+  lazy = true,
+  enabled = false,
   opts = {
     options = {
       highlight_inactive_windows = false,

@@ -17,7 +17,6 @@ end
 
 require "lazy_setup"
 require "polish"
-vim.cmd "colorscheme onedark_dark"
 
 -- Normal mode: Ctrl + / → toggle line comment
 vim.keymap.set(
