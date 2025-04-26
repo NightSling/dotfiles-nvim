@@ -1,12 +1,12 @@
 return {
   "Saghen/blink.cmp",
-  ---@module 'blink.cmp'
-  ---@type blink.cmp.Config
   dependencies = {
     {
       "giuxtaposition/blink-cmp-copilot",
     },
   },
+  ---@module 'blink.cmp'
+  ---@type blink.cmp.Config
   opts = {
     sources = {
       default = { "lsp", "path", "snippets", "buffer", "copilot" },
@@ -33,7 +33,7 @@ return {
         auto_show = true,
       },
       documentation = {
-        auto_show = false,
+        auto_show = true,
       },
     },
     signature = { enabled = false },

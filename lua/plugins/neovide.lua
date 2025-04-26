@@ -9,12 +9,14 @@ vim.keymap.set({ "n", "v" }, "<Leader>Nr", ":lua vim.g.neovide_scale_factor = 1<
 vim.g.neovide_padding_top = 5
 vim.g.neovide_padding_right = 5
 vim.g.neovide_padding_left = 5
--- vim.g.neovide_window_blurred = true
--- vim.g.neovide_floating_blur_amount_x = 5.0
--- vim.g.neovide_floating_blur_amount_y = 5.0
--- vim.g.neovide_floating_shadow = true
--- vim.g.neovide_floating_z_height = 10
+vim.g.neovide_window_blurred = true
+vim.g.neovide_floating_blur_amount_x = 5.0
+vim.g.neovide_floating_blur_amount_y = 5.0
+vim.g.neovide_floating_shadow = true
+vim.g.neovide_floating_z_height = 10
 
+vim.g.neovide_transparency = 0.9
+vim.g.neovide_normal_opacity = 0.8
 vim.g.neovide_cursor_antialiasing = false
 
 vim.g.neovide_cursor_vfx_mode = "pixiedust"

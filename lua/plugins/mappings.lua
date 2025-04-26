@@ -21,6 +21,24 @@ return {
           ["<S-h>"] = { "<cmd>bprevious<cr>", desc = "Switch to the previous buffer" },
           ["<Leader>G"] = { "<cmd>Octo actions<cr>", desc = "Open Octo actions" },
           ["<Leader>uk"] = { "<cmd>ShowkeysToggle<cr>", desc = "Toggle show keys for neovim." },
+          ["<C-c>"] = {
+            function()
+              local wins = vim.api.nvim_tabpage_list_wins(0)
+              local curr = vim.api.nvim_get_current_win()
+              for _, win in ipairs(wins) do
+                if win ~= curr then
+                  local cfg = vim.api.nvim_win_get_config(win)
+                  if cfg.relative ~= "" then
+                    vim.api.nvim_win_close(win, true)
+                    return
+                  end
+                end
+              end
+              -- Fallback to normal <C-c> (like <Esc>)
+              vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
+            end,
+            desc = "Closes pop-up windows otherwise fallback.",
+          },
         },
         i = {
           ["jk"] = {
@@ -31,6 +49,7 @@ return {
           },
           -- New mapping for showing documentation (like 'K' in normal mode)
           ["<C-S-k>"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "Show documentation (Hover)" },
+          ["<C-k>"] = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", desc = "Toggle show signature for current line." },
           ["<C-F2>"] = { "<cmd>CompilerOpen<cr>", desc = "Open's the Compiler.Nvim layout." },
           ["<F2>"] = { "<cmd>CompilerStop<cr>" .. "<cmd>CompilerRedo<cr>", desc = "Redo last compiler task." },
           ["<A-F2>"] = { "<cmd>CompilerToggleResults<cr>", desc = "View last compiler task." },

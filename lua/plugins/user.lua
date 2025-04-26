@@ -8,11 +8,11 @@ return {
   -- == Examples of Adding Plugins ==
 
   { "vyfor/cord.nvim", build = ":Cord update" },
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function() require("lsp_signature").setup() end,
-  },
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "BufRead",
+  --   config = function() require("lsp_signature").setup() end,
+  -- },
 
   -- == Examples of Overriding Plugins ==
 
