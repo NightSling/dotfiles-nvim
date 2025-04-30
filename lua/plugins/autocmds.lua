@@ -12,8 +12,8 @@ return {
           },
           {
             event = "VimLeave",
-            desc = "Set kitty padding to 25 when exiting vim.",
-            command = "silent !kitty @ set-spacing padding=25",
+            desc = "Set kitty padding to 0 when exiting vim.",
+            command = "silent !kitty @ set-spacing padding=0",
           },
         },
       },
