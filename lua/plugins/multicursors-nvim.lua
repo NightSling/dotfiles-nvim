@@ -15,14 +15,14 @@ return {
     {
       "AstroNvim/astrocore",
       opts = function(_, opts)
-        local maps = opts.mappings
+        local keymap = opts.mappings
         for lhs, map in pairs {
           ["<C-Down>"] = { "<Cmd>MultipleCursorsAddDown<CR>", desc = "Add cursor down" },
           ["<C-Up>"] = { "<Cmd>MultipleCursorsAddUp<CR>", desc = "Add cursor up" },
           ["<C-LeftMouse>"] = { "<Cmd>MultipleCursorsMouseAddDelete<CR>", desc = "Add cursor with mouse" },
         } do
-          maps.n[lhs] = map
-          maps.i[lhs] = map
+          keymap.n[lhs] = map
+          keymap.i[lhs] = map
         end
         local prefix = "<Leader>m"
         for lhs, map in pairs {
@@ -36,8 +36,8 @@ return {
           [prefix .. "J"] = { "<Cmd>MultipleCursorsJumpNextMatch<CR>", desc = "Move cursor to next match" },
           [prefix .. "l"] = { "<Cmd>MultipleCursorsLock<CR>", desc = "Lock virtual cursors" },
         } do
-          maps.n[lhs] = map
-          maps.x[lhs] = map
+          keymap.n[lhs] = map
+          keymap.x[lhs] = map
         end
       end,
     },
