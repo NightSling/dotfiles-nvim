@@ -4,6 +4,6 @@ return {
   --- @type wk.Opts
   opts = {
     preset = "helix",
-    delay = 1000,
+    delay = 1,
   },
 }
