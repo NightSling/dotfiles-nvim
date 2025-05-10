@@ -12,6 +12,15 @@ end
 
 return {
   {
+    "refractalize/oil-git-status.nvim",
+
+    dependencies = {
+      "stevearc/oil.nvim",
+    },
+
+    config = true,
+  },
+  {
     "stevearc/oil.nvim",
     ---@module 'oil'
     ---@type oil.SetupOpts
@@ -32,6 +41,7 @@ return {
       require("oil").setup {
         win_options = {
           winbar = "%!v:lua.get_oil_winbar()",
+          signcolumn = "yes:2",
         },
         view_options = {
           show_hidden = true,

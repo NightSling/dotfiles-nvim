@@ -8,6 +8,18 @@ return {
     "MunifTanjim/nui.nvim",
   },
   opts = {
-    lang = "golang",
+    lang = "cpp",
+    injector = { ---@type table<lc.lang, lc.inject>
+      ["cpp"] = {
+        before = { "#include <bits/stdc++.h>", "using namespace std;" },
+        after = "int main() {}",
+      },
+      ["java"] = {
+        before = "import java.util.*;",
+      },
+      ["go"] = {
+        before = { "package main;" },
+      },
+    },
   },
 }

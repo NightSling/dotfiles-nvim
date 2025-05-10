@@ -31,6 +31,7 @@ return {
   { import = "astrocommunity.colorscheme.gruvbox-baby" },
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.recipes.vscode" },
+  { import = "astrocommunity.pack.java" },
   -- Themes
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.rose-pine" },

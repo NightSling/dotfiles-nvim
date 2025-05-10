@@ -16,6 +16,16 @@ return {
             command = "silent !kitty @ set-spacing padding=0",
           },
         },
+        cpp_indentation = {
+          {
+            event = "FileType",
+            pattern = { "c", "cpp" },
+            desc = "Set C/C++ indentation settings",
+            command = [[
+              setlocal tabstop=2 shiftwidth=2 expandtab
+            ]],
+          },
+        },
       },
     },
   },
