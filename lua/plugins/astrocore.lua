@@ -12,7 +12,7 @@ return {
       detector = {
         "lsp", -- highest priority is getting workspace from running language servers
         { "lsp" },
-        { "lua", "MakeFile", "package.json", "Cargo.toml", "build.gradle.kts", "pom.xml", "go.mod" }, -- lastly check for known project root files
+        { "lua", "MakeFile", "package.json", "Cargo.toml", "build.gradle.kts", "pom.xml", "go.mod", "build.gradle" }, -- lastly check for known project root files
         { ".git", "_darcs", ".hg", ".bzr", ".svn" }, -- next check for a version controlled parent directory
       },
       -- ignore things from root detection
@@ -25,7 +25,7 @@ return {
       -- scope of working directory to change ("global"|"tab"|"win")
       scope = "global",
       -- show notification on every working directory change
-      notify = true,
+      notify = false,
     },
     -- Configure core features of AstroNvim
     features = {

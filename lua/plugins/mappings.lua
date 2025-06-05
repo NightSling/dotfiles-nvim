@@ -5,8 +5,10 @@ return {
     opts = {
       mappings = {
         n = {
-          ["<Leader>e"] = { "<cmd>Oil<cr>", desc = "Oil the current directory." },
-          ["<Leader>o"] = { "<cmd>Neotree float toggle<cr>", desc = "Toggle neotree (float) current directory." },
+
+          ["<Leader>e"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle neotree (float) current directory." },
+          ["<Leader>o"] = { "<cmd>Oil<cr>", desc = "Oil the current directory." },
+          ["<Leader>O"] = { "<cmd>Neotree float toggle<cr>", desc = "Toggle neotree (float) current directory." },
           ['<C-">'] = { "<cmd>AstroRoot<cr>", desc = "Go to AstroNvim project root." },
           ["<C-F2>"] = { "<cmd>CompilerOpen<cr>", desc = "Open's the Compiler.Nvim layout." },
           ["<F2>"] = { "<cmd>CompilerStop<cr>" .. "<cmd>CompilerRedo<cr>", desc = "Redo last compiler task." },
